@@ -1,0 +1,635 @@
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #101e35;
+    --navy-light: #1c304c;
+    --gold: #c6a66b;
+    --cream: #f8f6f0;
+    --white: #ffffff;
+    --text: #343c48;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVIGATION */
+
+header {
+    background: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo span,
+footer span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 27px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 620px;
+    padding: 100px 10%;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.intro {
+    color: var(--gold);
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 78px);
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero h3 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.hero-description {
+    color: #d1d7e0;
+    margin: 20px 0 30px;
+    max-width: 550px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.primary-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 1px solid var(--gold);
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.hero-design {
+    text-align: center;
+}
+
+.circle {
+    height: 250px;
+    width: 250px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border: 1px solid #ffffff55;
+    border-radius: 50%;
+}
+
+.circle span {
+    font-family: 'Playfair Display', serif;
+    font-size: 75px;
+    color: var(--gold);
+}
+
+.hero-design p {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 25px;
+}
+
+/* COMMON SECTIONS */
+
+.section {
+    padding: 85px 10%;
+}
+
+.alternate {
+    background: #eeece5;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading p {
+    font-size: 11px;
+    color: #a18450;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--navy);
+    margin-top: 8px;
+}
+
+/* ABOUT */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.about-card {
+    background: white;
+    padding: 35px;
+    border-left: 4px solid var(--gold);
+    box-shadow: 0 5px 25px #00000008;
+}
+
+.about-card h3 {
+    color: var(--navy);
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.about-details {
+    display: grid;
+    gap: 18px;
+}
+
+.detail {
+    border-bottom: 1px solid #d8d3c8;
+    padding-bottom: 12px;
+}
+
+.detail span {
+    color: #9c7d46;
+    font-size: 12px;
+}
+
+.detail h4 {
+    color: var(--navy);
+    font-size: 14px;
+}
+
+/* TIMELINE */
+
+.timeline {
+    max-width: 850px;
+    margin: auto;
+    border-left: 2px solid var(--gold);
+    padding-left: 35px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -43px;
+    top: 8px;
+    height: 14px;
+    width: 14px;
+    background: var(--gold);
+    border: 3px solid var(--cream);
+    border-radius: 50%;
+}
+
+.year {
+    font-size: 12px;
+    color: #9c7d46;
+    font-weight: 600;
+}
+
+.timeline-content {
+    background: white;
+    padding: 22px 25px;
+    margin-top: 8px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px #00000008;
+}
+
+.timeline-content h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    font-size: 20px;
+}
+
+.timeline-content h4 {
+    color: #a18450;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.timeline-content p {
+    font-size: 13px;
+}
+
+/* EXPERIENCE */
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.experience-card {
+    background: white;
+    padding: 30px;
+    border-top: 3px solid var(--gold);
+    box-shadow: 0 5px 20px #00000008;
+    transition: 0.3s;
+}
+
+.experience-card:hover,
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.tag {
+    background: #f1eadb;
+    color: #987744;
+    padding: 5px 12px;
+    font-size: 11px;
+    border-radius: 20px;
+}
+
+.experience-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    margin-top: 18px;
+    font-size: 22px;
+}
+
+.experience-card h4 {
+    color: #a18450;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.experience-card p,
+.experience-card li {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.experience-card ul {
+    padding-left: 20px;
+}
+
+/* ACTIVITIES */
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.activity-card {
+    padding: 30px;
+    background: white;
+    border-bottom: 3px solid var(--gold);
+    transition: 0.3s;
+}
+
+.activity-card span {
+    color: #a18450;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.activity-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.activity-card p {
+    font-size: 13px;
+}
+
+/* CREATIVE SECTION */
+
+.creative-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    padding: 55px;
+    background: var(--navy);
+    color: white;
+    border-radius: 5px;
+}
+
+.creative-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.creative-box p {
+    font-size: 14px;
+    color: #d1d7e0;
+}
+
+.creative-box span {
+    display: inline-block;
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+/* SKILLS */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skill {
+    background: white;
+    padding: 18px;
+    text-align: center;
+    border-left: 3px solid var(--gold);
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: var(--navy);
+    color: white;
+}
+
+.languages {
+    max-width: 700px;
+    margin: 50px auto 0;
+}
+
+.languages h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: white;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.language-item span:first-child {
+    font-weight: 600;
+    color: var(--navy);
+}
+
+/* CONTACT */
+
+.contact-section {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+}
+
+.contact-section .section-heading h2 {
+    color: white;
+}
+
+.contact-intro {
+    max-width: 600px;
+    margin: auto auto 35px;
+    color: #d1d7e0;
+    font-size: 14px;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    margin: 12px;
+    font-size: 13px;
+}
+
+.contact-details a {
+    color: var(--gold);
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0a1425;
+    padding: 35px;
+    text-align: center;
+    color: white;
+}
+
+footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+footer p {
+    color: #b7bfca;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+footer .copyright {
+    margin-top: 20px;
+    color: #8994a4;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 75px 7%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero-design .circle {
+        height: 190px;
+        width: 190px;
+    }
+
+    .circle::before {
+        height: 160px;
+        width: 160px;
+    }
+
+    .circle span {
+        font-size: 55px;
+    }
+
+    .experience-grid,
+    .activity-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .creative-box {
+        padding: 30px 20px;
+    }
+
+    .creative-box h3 {
+        font-size: 24px;
+    }
+
+    .language-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
